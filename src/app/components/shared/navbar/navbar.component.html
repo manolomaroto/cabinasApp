@@ -1,0 +1,20 @@
+<nav>
+    <div class="nav-wrapper blue-grey">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li routerLinkActive="active"><a [routerLink]="['home']">Home</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['cabinas']">Cabinas</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['about']">About</a></li>
+            <li>
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </li>
+        </ul>
+
+    </div>
+</nav>
