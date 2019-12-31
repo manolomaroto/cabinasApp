@@ -15,6 +15,10 @@ import { AboutComponent } from './components/about/about.component';
 import { CabinasComponent } from './components/cabinas/cabinas.component';
 import { CabinaComponent } from './components/cabina/cabina.component';
 
+// pipes
+import { SafePipe } from './pipes/url-safe.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,8 @@ import { CabinaComponent } from './components/cabina/cabina.component';
     HomeComponent,
     AboutComponent,
     CabinasComponent,
-    CabinaComponent
+    CabinaComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

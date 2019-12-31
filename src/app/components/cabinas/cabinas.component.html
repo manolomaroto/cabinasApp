@@ -2,7 +2,7 @@
     <h1>Cabinas de toda España</h1>
 </div>
 <div class="row">
-    <div class="col s12 m6" *ngFor="let cabina of cabinas">
+    <div class="col s12 m6" *ngFor="let cabina of cabinas; let i = index">
         <div class="card">
             <div class="card-image">
                 <img [src]="cabina.img">
@@ -12,7 +12,7 @@
                 <p>{{ cabina.comentario }}</p>
             </div>
             <div class="card-action">
-                <a href="#">Ver más</a>
+                <a [routerLink]="['/cabina', i]">Ver más</a>
             </div>
         </div>
     </div>
