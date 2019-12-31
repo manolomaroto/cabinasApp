@@ -17,6 +17,7 @@ import { CabinaComponent } from './components/cabina/cabina.component';
 
 // pipes
 import { SafePipe } from './pipes/url-safe.pipe';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SafePipe } from './pipes/url-safe.pipe';
     AboutComponent,
     CabinasComponent,
     CabinaComponent,
-    SafePipe
+    SafePipe,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

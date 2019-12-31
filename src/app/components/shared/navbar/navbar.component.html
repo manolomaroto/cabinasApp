@@ -6,13 +6,17 @@
             <li routerLinkActive="active"><a [routerLink]="['cabinas']">Cabinas</a></li>
             <li routerLinkActive="active"><a [routerLink]="['about']">About</a></li>
             <li>
-                <form>
-                    <div class="input-field">
-                        <input id="search" type="search" required>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
+                <nav>
+                    <div class="nav-wrapper blue-grey">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required #buscarTexto>
+                                <label class="label-icon" for="search"><i (click)="buscarCabina(buscarTexto.value)" class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </nav>
             </li>
         </ul>
 

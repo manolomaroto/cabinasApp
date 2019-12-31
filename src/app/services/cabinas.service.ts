@@ -25,6 +25,19 @@ export class CabinasService {
     getCabina( id: any ) {
         return this.cabinas[id];
     }
+
+    buscarCabina(termino: string) {
+        const cabinasArr: Cabina[] = [];
+        termino = termino.toLowerCase();
+
+        for (const cabina of this.cabinas) {
+            const nombre = cabina.localizacion.toLowerCase();
+            if (nombre.indexOf( termino ) >= 0) {
+                cabinasArr.push( cabina );
+            }
+        }
+        return cabinasArr;
+      }
 }
 
 export interface Cabina {
