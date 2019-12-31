@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CabinasService, Cabina } from '../../services/cabinas.service';
+
+
 @Component({
   selector: 'app-cabinas',
   templateUrl: './cabinas.component.html',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabinasComponent implements OnInit {
 
-  constructor() { }
+  cabinas: Cabina[] = [];
+  constructor(
+    private cabinasService: CabinasService
+  ) { }
 
   ngOnInit() {
+    this.cabinas = this.cabinasService.getCabinas();
   }
 
 }

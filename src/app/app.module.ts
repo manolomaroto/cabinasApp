@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
 
 // Servicios
+import { CabinasService } from './services/cabinas.service';
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CabinasComponent } from './components/cabinas/cabinas.component';
+import { CabinaComponent } from './components/cabina/cabina.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { CabinasComponent } from './components/cabinas/cabinas.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    CabinasComponent
+    CabinasComponent,
+    CabinaComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    CabinasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
