@@ -30,10 +30,14 @@ export class CabinasService {
         const cabinasArr: Cabina[] = [];
         termino = termino.toLowerCase();
 
-        for (const cabina of this.cabinas) {
-            const nombre = cabina.localizacion.toLowerCase();
+        for (let i = 0; i < this.cabinas.length; i++) {
+            const cabinaBuscada = this.cabinas[i];
+
+            const nombre = cabinaBuscada.localizacion.toLowerCase();
+
             if (nombre.indexOf( termino ) >= 0) {
-                cabinasArr.push( cabina );
+                cabinaBuscada.idx = i;
+                cabinasArr.push( cabinaBuscada );
             }
         }
         return cabinasArr;
@@ -46,4 +50,5 @@ export interface Cabina {
     comentario: string;
     img: string;
     coordenadas: string;
+    idx?: number;
 }

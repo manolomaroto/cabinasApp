@@ -1,0 +1,14 @@
+<div class="col s12 m6">
+    <div class="card">
+        <div class="card-image">
+            <img [src]="cabina.img">
+        </div>
+        <div class="card-content">
+            <span class="card-title">{{ cabina.localizacion }}</span>
+            <p>{{ cabina.comentario }}</p>
+        </div>
+        <div class="card-action">
+            <a [routerLink]="['/cabina', index]">Ver más</a>
+        </div>
+    </div>
+</div>
