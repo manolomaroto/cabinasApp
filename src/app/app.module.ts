@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
@@ -19,6 +20,8 @@ import { CabinaComponent } from './components/cabina/cabina.component';
 import { SafePipe } from './pipes/url-safe.pipe';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { CabinaTarjetaComponent } from './components/cabina-tarjeta/cabina-tarjeta.component';
+import { LoginComponent } from './components/login/login.component';
+import { AccederComponent } from './components/acceder/acceder.component';
 
 
 @NgModule({
@@ -31,11 +34,14 @@ import { CabinaTarjetaComponent } from './components/cabina-tarjeta/cabina-tarje
     CabinaComponent,
     SafePipe,
     BuscadorComponent,
-    CabinaTarjetaComponent
+    CabinaTarjetaComponent,
+    LoginComponent,
+    AccederComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule
   ],
   providers: [
     CabinasService
