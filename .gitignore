@@ -48,3 +48,7 @@ Thumbs.db
 # images
 
 /src/assets/img
+
+# apikey
+
+/src/environments/environment.prod.ts
